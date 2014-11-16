@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>ycanales</title>
+  <subtitle>Anotaciones esporádicas.</subtitle>
+  <id>http://www.example.com</id>
+  <link href="http://www.example.com"/>
+  <link href="http://www.example.com/feed.xml" rel="self"/>
+  <updated>2014-11-15T21:00:00-03:00</updated>
+  <author>
+    <name>Cristian Yáñez C.</name>
+  </author>
+  <entry>
+    <title>Acelerar autohide del Dock</title>
+    <link rel="alternate" href="http://www.example.com/2014/11/16/velocidad-autohide-dock-osx/"/>
+    <id>http://www.example.com/2014/11/16/velocidad-autohide-dock-osx/</id>
+    <published>2014-11-15T21:00:00-03:00</published>
+    <updated>2014-11-16T01:57:06-03:00</updated>
+    <author>
+      <name>Cristian Yáñez C.</name>
+    </author>
+    <summary type="html">
+
+Si exprimes cada pixel de la pantalla activando la opción para que el dock se oculte automáticamente te habrás dado cuenta que la apertura tiene un retraso que llega a ser desagradable con el uso prolongado.
+
+Para mostrar inmediatamente el dock y...</summary>
+  </entry>
+</feed>
