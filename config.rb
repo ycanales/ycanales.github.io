@@ -96,6 +96,11 @@ set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true
 activate :syntax, line_numbers: true
 
+
+activate :deploy do |deploy|
+  deploy.method = :git
+end
+
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper

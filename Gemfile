@@ -17,5 +17,5 @@ gem 'redcarpet', '~> 3.1.2'
 gem 'nokogiri', '~> 1.6.3.1'
 gem 'sanitize', '~> 3.0.2'
 
-gem 'middleman-gh-pages'
+gem 'middleman-deploy', '~> 0.3.0'
 
