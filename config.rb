@@ -99,6 +99,7 @@ activate :syntax, line_numbers: true
 
 activate :deploy do |deploy|
   deploy.method = :git
+  deploy.branch = 'master'
 end
 
 # Methods defined in the helpers block are available in templates

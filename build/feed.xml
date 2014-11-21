@@ -5,16 +5,43 @@
   <id>http://www.example.com</id>
   <link href="http://www.example.com"/>
   <link href="http://www.example.com/feed.xml" rel="self"/>
-  <updated>2014-11-15T21:00:00-03:00</updated>
+  <updated>2014-11-19T21:00:00-03:00</updated>
   <author>
     <name>Cristian Yáñez C.</name>
   </author>
+  <entry>
+    <title>Importar datos a MySQL desde un archivo CSV con TIMESTAMP</title>
+    <link rel="alternate" href="http://www.example.com/2014/11/20/importar-csv-mysql-timestamp/"/>
+    <id>http://www.example.com/2014/11/20/importar-csv-mysql-timestamp/</id>
+    <published>2014-11-19T21:00:00-03:00</published>
+    <updated>2014-11-20T21:55:19-03:00</updated>
+    <author>
+      <name>Cristian Yáñez C.</name>
+    </author>
+    <summary type="html">En este post veremos como importar datos en formato CSV a una base de datos MySQL.
+
+Partimos por ingresar al administrador de MySQL por línea de comandos:
+
+
+1
+mysql -u user_mysql -p
+
+
+
+
+Listamos y seleccionamos la base de datos a utilizar:
+
+1
+2
+show databases...
+</summary>
+  </entry>
   <entry>
     <title>Acelerar autohide del Dock</title>
     <link rel="alternate" href="http://www.example.com/2014/11/16/velocidad-autohide-dock-osx/"/>
     <id>http://www.example.com/2014/11/16/velocidad-autohide-dock-osx/</id>
     <published>2014-11-15T21:00:00-03:00</published>
-    <updated>2014-11-16T01:57:06-03:00</updated>
+    <updated>2014-11-16T02:31:27-03:00</updated>
     <author>
       <name>Cristian Yáñez C.</name>
     </author>
