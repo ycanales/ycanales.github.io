@@ -1,0 +1,5 @@
+baseURL = "http://ycanales.com/"
+languageCode = "es-cl"
+title = "ycanales"
+theme = "one"
+googleAnalytics = "UA-120059612-1"
