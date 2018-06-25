@@ -1,5 +1,14 @@
 baseURL = "http://ycanales.com/"
+defaultContentLanguage = "es"
 languageCode = "es-cl"
 title = "ycanales"
 theme = "one"
 googleAnalytics = "UA-120059612-1"
+
+[languages]
+  [languages.es]
+    weight = 1
+    languageName = "Español"
+  [languages.en]
+    weight = 2
+    languageName = "English"
