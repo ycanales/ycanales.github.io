@@ -1,7 +1,7 @@
 ---
-label: Showing full path in Finder window
-hide_body: 
-is_partial: 
+label: Text Post
+hide_body: false
+is_partial: false
 fields:
 - name: title
   label: Title
