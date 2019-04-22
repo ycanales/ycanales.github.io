@@ -1,5 +1,5 @@
 ---
-title: "Utilizar Dependencia Local con NPM o Yarn"
+title: "Utilizar dependencia local con NPM o Yarn"
 date: 2019-04-22T15:49:17-04:00
 draft: false
 ---
