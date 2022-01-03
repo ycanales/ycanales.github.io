@@ -1,8 +1,8 @@
-baseURL = "http://ycanales.com/"
+baseURL = "https://ycanales.github.io/"
 defaultContentLanguage = "es"
 languageCode = "es-cl"
 title = "ycanales"
-theme = "one"
+theme = "ananke"
 googleAnalytics = "UA-120059612-1"
 
 [languages]
