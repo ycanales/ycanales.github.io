@@ -1,0 +1,102 @@
+<!doctype html><html lang=es-cl>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
+<title>Faster dock appearing | ycanales</title>
+<meta name=viewport content="width=device-width,minimum-scale=1">
+<meta name=description content="In macOS if we set the Dock to automatically hide and show we&rsquo;ll notice a slight delay between reaching the bottom of the screen and the Dock appearing.
+For it to show immediately open a terminal and run these three lines:
+defaults write com.apple.dock autohide-delay -int 0 defaults write com.apple.dock autohide-time-modifier -float 0.4 killall Dock To revert the changes:
+defaults delete com.apple.dock autohide-delay defaults delete com.apple.dock autohide-time-modifier killall Dock Source: Ask Different.">
+<meta name=generator content="Hugo 0.91.2">
+<meta name=ROBOTS content="NOINDEX, NOFOLLOW">
+<link rel=stylesheet href=/ananke/css/main.min.css>
+<meta property="og:title" content="Faster dock appearing">
+<meta property="og:description" content="In macOS if we set the Dock to automatically hide and show we&rsquo;ll notice a slight delay between reaching the bottom of the screen and the Dock appearing.
+For it to show immediately open a terminal and run these three lines:
+defaults write com.apple.dock autohide-delay -int 0 defaults write com.apple.dock autohide-time-modifier -float 0.4 killall Dock To revert the changes:
+defaults delete com.apple.dock autohide-delay defaults delete com.apple.dock autohide-time-modifier killall Dock Source: Ask Different.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ycanales.github.io/en/posts/faster-dock-appearing/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2014-11-30T22:09:25-04:00">
+<meta property="article:modified_time" content="2014-11-30T22:09:25-04:00">
+<meta itemprop=name content="Faster dock appearing">
+<meta itemprop=description content="In macOS if we set the Dock to automatically hide and show we&rsquo;ll notice a slight delay between reaching the bottom of the screen and the Dock appearing.
+For it to show immediately open a terminal and run these three lines:
+defaults write com.apple.dock autohide-delay -int 0 defaults write com.apple.dock autohide-time-modifier -float 0.4 killall Dock To revert the changes:
+defaults delete com.apple.dock autohide-delay defaults delete com.apple.dock autohide-time-modifier killall Dock Source: Ask Different."><meta itemprop=datePublished content="2014-11-30T22:09:25-04:00">
+<meta itemprop=dateModified content="2014-11-30T22:09:25-04:00">
+<meta itemprop=wordCount content="72">
+<meta itemprop=keywords content><meta name=twitter:card content="summary">
+<meta name=twitter:title content="Faster dock appearing">
+<meta name=twitter:description content="In macOS if we set the Dock to automatically hide and show we&rsquo;ll notice a slight delay between reaching the bottom of the screen and the Dock appearing.
+For it to show immediately open a terminal and run these three lines:
+defaults write com.apple.dock autohide-delay -int 0 defaults write com.apple.dock autohide-time-modifier -float 0.4 killall Dock To revert the changes:
+defaults delete com.apple.dock autohide-delay defaults delete com.apple.dock autohide-time-modifier killall Dock Source: Ask Different.">
+</head>
+<body class="ma0 avenir bg-near-white">
+<header>
+<div class=bg-black>
+<nav class="pv3 ph3 ph4-ns" role=navigation>
+<div class="flex-l justify-between items-center center">
+<a href=/en/ class="f3 fw2 hover-white no-underline white-90 dib">
+ycanales
+</a>
+<div class="flex-l items-center">
+<h4></h4>
+<ul class="pl0 mr3">
+<li class="list f5 f4-ns fw4 dib pr3">
+<a class="hover-white no-underline white-90" href=/posts/acelerar-aparicion-del-dock/>es</a>
+</li>
+</ul>
+<div class=ananke-socials>
+</div>
+</div>
+</div>
+</nav>
+</div>
+</header>
+<main class=pb7 role=main>
+<article class="flex-l flex-wrap justify-between mw8 center ph3">
+<header class="mt4 w-100">
+<aside class="instapaper_ignoref b helvetica tracked">
+POSTS
+</aside>
+<div id=sharing class="mt3 ananke-socials">
+</div>
+<h1 class="f1 athelas mt3 mb1">Faster dock appearing</h1>
+<time class="f6 mv4 dib tracked" datetime=2014-11-30T22:09:25-04:00>November 30, 2014</time>
+</header>
+<div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>In macOS if we set the Dock to automatically hide and show we&rsquo;ll
+notice a slight delay between reaching the bottom of the screen and
+the Dock appearing.</p>
+<p>For it to show immediately open a terminal and run these three lines:</p>
+<pre tabindex=0><code>defaults write com.apple.dock autohide-delay -int 0
+defaults write com.apple.dock autohide-time-modifier -float 0.4
+killall Dock
+</code></pre><p>To revert the changes:</p>
+<pre tabindex=0><code>defaults delete com.apple.dock autohide-delay
+defaults delete com.apple.dock autohide-time-modifier
+killall Dock
+</code></pre><p>Source: <a href=https://apple.stackexchange.com/questions/33600/how-can-i-make-auto-hide-show-for-the-dock-faster/46222#46222>Ask Different</a>.</p>
+<ul class=pa0>
+</ul>
+<div class="mt6 instapaper_ignoref">
+</div>
+</div>
+<aside class="w-30-l mt6-l">
+</aside>
+</article>
+</main>
+<footer class="bg-black bottom-0 w-100 pa3" role=contentinfo>
+<div class="flex justify-between">
+<a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href=https://ycanales.github.io/>
+&copy; ycanales 2022
+</a>
+<div>
+<div class=ananke-socials>
+</div></div>
+</div>
+</footer>
+</body>
+</html>

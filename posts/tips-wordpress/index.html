@@ -1,0 +1,112 @@
+<!doctype html><html lang=es-cl>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
+<title>Tips Wordpress | ycanales</title>
+<meta name=viewport content="width=device-width,minimum-scale=1">
+<meta name=description content="Cambiar contraseña a usuario por línea de comandos Nos conectamos por SSH a la máquina que contiene la base de datos, ésta aparece en el archivo wp-config.php, donde dice define('DB_HOST', 'localhost'); (en este caso, está en el mismo servidor que hospeda el sitio.)
+Aprovechamos de anotar desde el archivo otros datos que vamos a necesitar:
+define('DB_NAME', 'la_bd'); define('DB_USER', 'el_usuario'); define('DB_PASSWORD', '12345'); Una vez conectados por SSH a la máquina, nos metemos a MySQL:">
+<meta name=generator content="Hugo 0.91.2">
+<meta name=ROBOTS content="NOINDEX, NOFOLLOW">
+<link rel=stylesheet href=/ananke/css/main.min.css>
+<meta property="og:title" content="Tips Wordpress">
+<meta property="og:description" content="Cambiar contraseña a usuario por línea de comandos Nos conectamos por SSH a la máquina que contiene la base de datos, ésta aparece en el archivo wp-config.php, donde dice define('DB_HOST', 'localhost'); (en este caso, está en el mismo servidor que hospeda el sitio.)
+Aprovechamos de anotar desde el archivo otros datos que vamos a necesitar:
+define('DB_NAME', 'la_bd'); define('DB_USER', 'el_usuario'); define('DB_PASSWORD', '12345'); Una vez conectados por SSH a la máquina, nos metemos a MySQL:">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ycanales.github.io/posts/tips-wordpress/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2013-07-12T22:02:23-04:00">
+<meta property="article:modified_time" content="2013-07-12T22:02:23-04:00">
+<meta itemprop=name content="Tips Wordpress">
+<meta itemprop=description content="Cambiar contraseña a usuario por línea de comandos Nos conectamos por SSH a la máquina que contiene la base de datos, ésta aparece en el archivo wp-config.php, donde dice define('DB_HOST', 'localhost'); (en este caso, está en el mismo servidor que hospeda el sitio.)
+Aprovechamos de anotar desde el archivo otros datos que vamos a necesitar:
+define('DB_NAME', 'la_bd'); define('DB_USER', 'el_usuario'); define('DB_PASSWORD', '12345'); Una vez conectados por SSH a la máquina, nos metemos a MySQL:"><meta itemprop=datePublished content="2013-07-12T22:02:23-04:00">
+<meta itemprop=dateModified content="2013-07-12T22:02:23-04:00">
+<meta itemprop=wordCount content="265">
+<meta itemprop=keywords content><meta name=twitter:card content="summary">
+<meta name=twitter:title content="Tips Wordpress">
+<meta name=twitter:description content="Cambiar contraseña a usuario por línea de comandos Nos conectamos por SSH a la máquina que contiene la base de datos, ésta aparece en el archivo wp-config.php, donde dice define('DB_HOST', 'localhost'); (en este caso, está en el mismo servidor que hospeda el sitio.)
+Aprovechamos de anotar desde el archivo otros datos que vamos a necesitar:
+define('DB_NAME', 'la_bd'); define('DB_USER', 'el_usuario'); define('DB_PASSWORD', '12345'); Una vez conectados por SSH a la máquina, nos metemos a MySQL:">
+</head>
+<body class="ma0 avenir bg-near-white">
+<header>
+<div class=bg-black>
+<nav class="pv3 ph3 ph4-ns" role=navigation>
+<div class="flex-l justify-between items-center center">
+<a href=/ class="f3 fw2 hover-white no-underline white-90 dib">
+ycanales
+</a>
+<div class="flex-l items-center">
+<div class=ananke-socials>
+</div>
+</div>
+</div>
+</nav>
+</div>
+</header>
+<main class=pb7 role=main>
+<article class="flex-l flex-wrap justify-between mw8 center ph3">
+<header class="mt4 w-100">
+<aside class="instapaper_ignoref b helvetica tracked">
+POSTS
+</aside>
+<div id=sharing class="mt3 ananke-socials">
+</div>
+<h1 class="f1 athelas mt3 mb1">Tips Wordpress</h1>
+<time class="f6 mv4 dib tracked" datetime=2013-07-12T22:02:23-04:00>July 12, 2013</time>
+</header>
+<div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id=cambiar-contraseña-a-usuario-por-línea-de-comandos>Cambiar contraseña a usuario por línea de comandos</h2>
+<p>Nos conectamos por SSH a la máquina que contiene la base de datos, ésta aparece en el
+archivo <code>wp-config.php</code>, donde dice <code>define('DB_HOST', 'localhost');</code> (en este caso,
+está en el mismo servidor que hospeda el sitio.)</p>
+<p>Aprovechamos de anotar desde el archivo otros datos que vamos a necesitar:</p>
+<pre tabindex=0><code>define('DB_NAME', 'la_bd');
+define('DB_USER', 'el_usuario');
+define('DB_PASSWORD', '12345');
+</code></pre><p>Una vez conectados por SSH a la máquina, nos metemos a MySQL:</p>
+<pre tabindex=0><code>$ mysql -p
+mysql&gt; use la_bd;
+mysql&gt; UPDATE wp_users
+     &gt; SET user_pass = MD5('nueva password') WHERE user_login = &quot;admin&quot;;
+</code></pre><p>Donde <strong>admin</strong> es el usuario al que queremos cambiar la contraseña.</p>
+<h2 id=actualizar-la-url-del-sitio>Actualizar la URL del sitio</h2>
+<p>Antes de cambiar la dirección o dominio del sitio web debemos configurarlo en el panel
+de Wordpress:</p>
+<p>Si se te olvidó hacer el cambio se verá mal la página al cargarla en su nueva dirección y,
+si mal no recuerdo, tampoco te permitirá ingresar con tu usuario. Siguiendo los pasos
+anteriores para ingresar a la consola de MySQL podemos corregir esto:</p>
+<pre tabindex=0><code>$ mysql -p
+mysql&gt; use la_bd;
+mysql&gt; UPDATE wp_options
+     &gt; SET option_value = &quot;http://nueva-direccion.cl&quot;
+     &gt; WHERE option_name = &quot;home&quot;;
+</code></pre><p>Aunque cambiamos sólo uno de los dos valores mostrados en el pantallazo anterior ahora
+podemos ingresar al panel y corregir el otro valor también.</p>
+<h2 id=cambiar-idioma-a-un-wordpress-ya-instalado>Cambiar idioma a un Wordpress ya instalado</h2>
+<p>Si tienes Wordpress en inglés y quieres colocarlo en español la solución es bastante rápida.
+Primero editamos el archivo <code>wp-config.php</code> y donde dice <code>define('WPLANG', '');</code> colocamos
+<code>define('WPLANG', 'es_ES')</code>, cuando entremos al panel de configuración nos ofrecerá actualizar
+la instalación de Wordpress a la versión en español.</p>
+<ul class=pa0>
+</ul>
+<div class="mt6 instapaper_ignoref">
+</div>
+</div>
+<aside class="w-30-l mt6-l">
+</aside>
+</article>
+</main>
+<footer class="bg-black bottom-0 w-100 pa3" role=contentinfo>
+<div class="flex justify-between">
+<a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href=https://ycanales.github.io/>
+&copy; ycanales 2022
+</a>
+<div>
+<div class=ananke-socials>
+</div></div>
+</div>
+</footer>
+</body>
+</html>
